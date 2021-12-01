@@ -2,17 +2,13 @@ import System.IO
     ( hClose, openFile, hGetContents, IOMode(ReadMode) )
 import Data.Either (rights)
 import GHC.IO.Exception (assertError)
-import Util (parseInt)
+import Util (parseInt, checkExamples)
 
 main :: IO ()
 main = do
     -- check example inputs
     let example_inputs = [199, 200, 208, 210, 200, 207, 240, 269, 260, 263]
-    if part1 example_inputs == 7 && part2 example_inputs == 5
-    then
-        putStrLn "test with example inputs passed"
-    else
-        putStrLn "test with example inputs failed"
+    checkExamples part1 7 part2 5 example_inputs
 
     -- process the real inputs
     handle <- openFile "day1.txt" ReadMode

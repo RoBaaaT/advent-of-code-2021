@@ -1,4 +1,4 @@
-module Util(parseInt, IntParseError) where
+module Util(parseInt, IntParseError, checkExamples) where
 
 newtype IntParseError = IntParseError String
 
@@ -25,3 +25,13 @@ parseIntFromChar c = case c of
     '8' -> Right 8
     '9' -> Right 9
     _ -> Left (IntParseError ("Unexpected character: " ++ [c]))
+
+checkExamples :: Eq o1 => Eq o2 => (input -> o1) -> o1 -> (input -> o2) -> o2 -> input -> IO ()
+checkExamples part1 expected1 part2 expected2 inputs = do
+    if part1 inputs == expected1 then
+        if part2 inputs == expected2 then
+            putStrLn "test with example inputs passed"
+        else
+            putStrLn "test with example inputs failed for part 2"
+    else
+        putStrLn "test with example inputs failed for part 1"
