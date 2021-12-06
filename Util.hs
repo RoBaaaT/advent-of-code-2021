@@ -1,4 +1,5 @@
-module Util(parseInt, IntParseError, checkExamples) where
+module Util(parseInt, IntParseError, checkExamples, Point (..), Line (..), parsePoint, parseLine) where
+import Data.List.Split (splitOn)
 
 newtype IntParseError = IntParseError String
 
@@ -35,3 +36,20 @@ checkExamples part1 expected1 part2 expected2 inputs = do
             putStrLn "test with example inputs failed for part 2"
     else
         putStrLn "test with example inputs failed for part 1"
+
+data Point = Point { x, y :: Int }
+    deriving Show
+
+parsePoint :: String -> Point
+parsePoint str = Point (read x) (read y)
+    where [x,y] = splitOn "," str
+
+data Line = Line { from, to :: Point }
+    deriving Show
+
+parseLine :: String -> Line
+parseLine str = Line from to
+    where
+        [left,right] = splitOn " -> " str
+        from = parsePoint left
+        to = parsePoint right

@@ -2,7 +2,7 @@ import System.IO
     ( hClose, openFile, hGetContents, IOMode(ReadMode) )
 import Data.Either (rights, fromRight)
 import GHC.IO.Exception (assertError)
-import Util (parseInt, checkExamples)
+import Util (parseInt, checkExamples, Point (..))
 
 main :: IO ()
 main = do
@@ -23,8 +23,6 @@ main = do
     print (part1 ls)
     print (part2 ls)
     hClose handle
-
-data Point = Point { x, y :: Int }
 
 part1 :: [String] -> Int
 part1 instructions = x dest * y dest
