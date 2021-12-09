@@ -6,10 +6,6 @@ import Data.List (sort, elemIndex)
 
 main :: IO ()
 main = do
-    let sortedUniques = map sort (words "gcafb gcf dcaebfg ecagb gf abcdeg gaef cafbge fdbac fegbdc")
-    let patterns = solvePatterns sortedUniques
-    print patterns
-    print (filter (`notElem` patterns) sortedUniques)
     -- check example inputs
     let example_input = "be cfbegad cbdgef fgaecd cgeb fdcge agebfd fecdb fabcd edb | fdgacbe cefdb cefbgd gcbe\n\
 \edbfga begcd cbg gc gcadebf fbgde acbgfd abcde gfcbed gfec | fcgedb cgb dgebacf gc\n\
