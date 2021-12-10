@@ -13,10 +13,6 @@ main = do
 \9856789892\n\
 \8767896789\n\
 \9899965678"
-    let heightmap = parseInput example_input
-    print (findBasinLocations heightmap [(0,1)] [(0,0), (0,2), (1,1)])
-    print (findBasinLocations heightmap [(0,9)] [(1,9), (0,8)])
-    print (reverse (sort (map (basinSize heightmap) (findLowPoints heightmap))))
     checkExamples part1 15 part2 1134 example_input
 
     -- process the real inputs
