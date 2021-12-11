@@ -6,8 +6,8 @@ import Data.List.Split (splitOn)
 main :: IO ()
 main = do
     -- check example inputs
-    let example_input = "3,4,3,1,2"
-    checkExamples part1 5934 part2 26984457539 example_input
+    let exampleInput = "3,4,3,1,2"
+    checkExamples part1 5934 part2 26984457539 exampleInput
 
     -- process the real inputs
     handle <- openFile "day6.txt" ReadMode

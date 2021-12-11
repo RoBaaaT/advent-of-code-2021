@@ -7,8 +7,8 @@ import Util (parseInt, checkExamples)
 main :: IO ()
 main = do
     -- check example inputs
-    let example_inputs = [199, 200, 208, 210, 200, 207, 240, 269, 260, 263]
-    checkExamples part1 7 part2 5 example_inputs
+    let exampleInputs = [199, 200, 208, 210, 200, 207, 240, 269, 260, 263]
+    checkExamples part1 7 part2 5 exampleInputs
 
     -- process the real inputs
     handle <- openFile "day1.txt" ReadMode

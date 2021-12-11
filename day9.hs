@@ -8,12 +8,12 @@ import Data.Char (digitToInt)
 main :: IO ()
 main = do
     -- check example inputs
-    let example_input = "2199943210\n\
+    let exampleInput = "2199943210\n\
 \3987894921\n\
 \9856789892\n\
 \8767896789\n\
 \9899965678"
-    checkExamples part1 15 part2 1134 example_input
+    checkExamples part1 15 part2 1134 exampleInput
 
     -- process the real inputs
     handle <- openFile "day9.txt" ReadMode

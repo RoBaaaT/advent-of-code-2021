@@ -7,7 +7,7 @@ import qualified Data.HashMap.Strict as HM
 main :: IO ()
 main = do
     -- check example inputs
-    let example_input = "0,9 -> 5,9\n\
+    let exampleInput = "0,9 -> 5,9\n\
 \8,0 -> 0,8\n\
 \9,4 -> 3,4\n\
 \2,2 -> 2,1\n\
@@ -17,7 +17,7 @@ main = do
 \3,4 -> 1,4\n\
 \0,0 -> 8,8\n\
 \5,5 -> 8,2"
-    checkExamples part1 5 part2 12 example_input
+    checkExamples part1 5 part2 12 exampleInput
 
     -- process the real inputs
     handle <- openFile "day5.txt" ReadMode

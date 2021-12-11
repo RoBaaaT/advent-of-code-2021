@@ -11,7 +11,7 @@ import Data.Maybe (mapMaybe)
 main :: IO ()
 main = do
     -- check example inputs
-    let example_input = "7,4,9,5,11,17,23,2,0,14,21,24,10,16,13,6,15,25,12,22,18,20,8,19,3,26,1\n\
+    let exampleInput = "7,4,9,5,11,17,23,2,0,14,21,24,10,16,13,6,15,25,12,22,18,20,8,19,3,26,1\n\
 \\n\
 \22 13 17 11  0\n\
 \ 8  2 23  4 24\n\
@@ -30,7 +30,7 @@ main = do
 \18  8 23 26 20\n\
 \22 11 13  6  5\n\
 \ 2  0 12  3  7"
-    checkExamples part1 4512 part2 1924 example_input
+    checkExamples part1 4512 part2 1924 exampleInput
 
     -- process the real inputs
     handle <- openFile "day4.txt" ReadMode

@@ -8,7 +8,7 @@ import Data.Bits (shiftL)
 main :: IO ()
 main = do
     -- check example inputs
-    let example_inputs = [ "00100"
+    let exampleInputs = [ "00100"
                          , "11110"
                          , "10110"
                          , "10111"
@@ -21,7 +21,7 @@ main = do
                          , "00010"
                          , "01010"
                          ]
-    checkExamples part1 198 part2 230 example_inputs
+    checkExamples part1 198 part2 230 exampleInputs
 
     -- process the real inputs
     handle <- openFile "day3.txt" ReadMode

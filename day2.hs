@@ -7,14 +7,14 @@ import Util (parseInt, checkExamples, Point (..))
 main :: IO ()
 main = do
     -- check example inputs
-    let example_inputs = [ "forward 5"
+    let exampleInputs = [ "forward 5"
                          , "down 5"
                          , "forward 8"
                          , "up 3"
                          , "down 8"
                          , "forward 2"
                          ]
-    checkExamples part1 150 part2 900 example_inputs
+    checkExamples part1 150 part2 900 exampleInputs
 
     -- process the real inputs
     handle <- openFile "day2.txt" ReadMode

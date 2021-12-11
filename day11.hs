@@ -18,7 +18,7 @@ import Data.List.Split (chunksOf)
 main :: IO ()
 main = do
     -- check example inputs
-    let example_input = "5483143223\n\
+    let exampleInput = "5483143223\n\
 \2745854711\n\
 \5264556173\n\
 \6141336146\n\
@@ -28,7 +28,7 @@ main = do
 \6882881134\n\
 \4846848554\n\
 \5283751526"
-    checkExamples part1 1656 part2 195 example_input
+    checkExamples part1 1656 part2 195 exampleInput
 
     -- process the real inputs
     handle <- openFile "day11.txt" ReadMode

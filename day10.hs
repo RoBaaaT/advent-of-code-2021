@@ -6,7 +6,7 @@ import Data.List (sort)
 main :: IO ()
 main = do
     -- check example inputs
-    let example_input = "[({(<(())[]>[[{[]{<()<>>\n\
+    let exampleInput = "[({(<(())[]>[[{[]{<()<>>\n\
 \[(()[<>])]({[<{<<[]>>(\n\
 \{([(<{}[<>[]}>{[]{[(<()>\n\
 \(((({<>}<{<{<>}{[]{[]{}\n\
@@ -16,7 +16,7 @@ main = do
 \[<(<(<(<{}))><([]([]()\n\
 \<{([([[(<>()){}]>(<<{{\n\
 \<{([{{}}[<[[[<>{}]]]>[]]"
-    checkExamples part1 26397 part2 288957 example_input
+    checkExamples part1 26397 part2 288957 exampleInput
 
     -- process the real inputs
     handle <- openFile "day10.txt" ReadMode
